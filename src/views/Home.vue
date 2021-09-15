@@ -1,18 +1,78 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="login py-5">
+    <main class="form-signin">
+      <form>
+        <h1 class="h3 mb-3 text-cen ter fw-normal text-center">Authenticate</h1>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Username"
+          />
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="my-3">
+          <button class="w-100 btn btn-lg btn-primary" type="submit">
+            Sign in
+          </button>
+        </div>
+        <p class="mt-5 mb-3 text-muted text-center">
+          Developer's Community @OPJU 2021
+        </p>
+      </form>
+    </main>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
+  name: "Login",
+  components: {},
 };
 </script>
+<style scoped lang="scss">
+login {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
