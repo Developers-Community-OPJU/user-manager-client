@@ -28,7 +28,7 @@
           </button>
         </div>
         <p class="mt-5 mb-3 text-muted text-center">
-          Developer's Community @OPJU 2021
+          <small>Developer's Community @OPJU 2021</small>
         </p>
       </form>
     </main>
