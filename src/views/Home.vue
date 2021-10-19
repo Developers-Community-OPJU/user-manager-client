@@ -1,7 +1,7 @@
 <template>
   <div class="login py-5">
     <main class="form-signin">
-      <form>
+      <form @submit.prevent="login()">
         <h1 class="h3 mb-3 text-cen ter fw-normal text-center">Authenticate</h1>
 
         <div class="form-floating">
@@ -38,6 +38,11 @@
 export default {
   name: "Login",
   components: {},
+  methods: {
+    login() {
+      this.$router.push({ name: "Dashboard" });
+    },
+  },
 };
 </script>
 <style scoped lang="scss">

@@ -2,7 +2,7 @@
   <div id="nav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Super Authenticate</a>
+        <a class="navbar-brand" href="#">Super Admin</a>
         <button
           class="navbar-toggler"
           type="button"
