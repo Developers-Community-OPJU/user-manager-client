@@ -47,10 +47,11 @@
               "
             >
               <div class="ms-2 me-auto">
+                <p>{{user.employeeCode}}</p>
                 <div class="fw-bold">
                   {{ user.firstname }} {{ user.lastname }}
                 </div>
-                {{ user.email }}
+                {{ user.email }} 
               </div>
               <span
                 v-if="user.adminIs == 'HOD'"
@@ -166,8 +167,9 @@
                       class="form-select"
                       aria-label="Default select example"
                     >
-                      <option value="BOYS_HOSTEL">Boys Hoetel</option>
-                      <option value="GIRLS_HOSTEL">Girls Hostel</option>
+                      <option value="HR1">Hall of Residence 1</option>
+                      <option value="HR2">Hall of Residence 2</option>
+                      <option value="HR3">Hall of Residence 3</option>
                       <option value="CSE">CSE</option>
                       <option value="EEE">EEE</option>
                       <option value="META">META</option>
@@ -241,7 +243,7 @@ export default {
   },
   beforeCreate() {
     this.loading = true;
-    this.axios.get("http://10.60.200.14:3000/api/admin/list").then((res) => {
+    this.axios.get("http://10.60.200.14:3030/api/admin/list").then((res) => {
       console.log(res.data.users);
       this.users = res.data.users;
       this.loading = false;
@@ -261,13 +263,13 @@ export default {
       // console.log(user);
       this.axios
         .post(
-          "http://10.60.200.14:3000/api/admin/add-user",
+          "http://10.60.200.14:3030/api/admin/add-user",
           qs.stringify(user),
           config
         )
         .then((res) => {
-          console.log(res);
           alert(res.data.msg);
+           this.$forceUpdate();
         });
     },
   },
